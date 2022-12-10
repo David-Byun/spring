@@ -1,7 +1,14 @@
 package com.example.test.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    //ID 자동생성 전략
+
+    @Column(name="username")
     private String name;
 
     public Long getId() {
