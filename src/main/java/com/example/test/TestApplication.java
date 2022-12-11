@@ -12,10 +12,4 @@ public class TestApplication {
 		SpringApplication.run(TestApplication.class, args);
 	}
 
-	public static class MemberApp {
-
-		public static void main(String[] args) {
-			MemberService memberService = new MemberServiceImpl();
-		}
-	}
 }

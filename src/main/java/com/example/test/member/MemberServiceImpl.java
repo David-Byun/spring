@@ -3,7 +3,11 @@ package com.example.test.member;
 // 관례상 Impl이 하나 있을 경우 MemberService 뒤에 Impl 작성
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
